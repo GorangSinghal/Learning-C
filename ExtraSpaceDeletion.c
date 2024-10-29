@@ -14,7 +14,13 @@ int main()
     for(i = 0 ; *p1 != '\0' ; i++)
     {
         if(*p1 == ' ')
-           strcpy(p1, (p1+1));
+        {
+           while(*(p1+1) == ' ')
+           {
+              strcpy(p1, (p1+1));
+           }
+           p1++;
+        }        
         else
            p1++;
     }
